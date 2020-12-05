@@ -1466,6 +1466,39 @@ RNFS.writeFile(path, name, 'utf8')
     }
 
 
+    /*在已有的txt上添加新的文本*/
+    appendFile() {
+        const path = RNFS.MainBundlePath + '/test.txt';
+
+        return RNFS.appendFile(path, '新添加的文本', 'utf8')
+            .then((success) => {
+                console.log('success');
+            })
+            .catch((err) => {
+                console.log(err.message);
+                const uploadUrl = 'http://buz.co/rnfs/upload-tester.php';
+
+            });
+    }
+
+
+    /*在已有的txt上添加新的文本*/
+    appendFile() {
+        const path = RNFS.MainBundlePath + '/test.txt';
+
+        return RNFS.appendFile(path, '新添加的文本', 'utf8')
+            .then((success) => {
+                console.log('success');
+            })
+            .catch((err) => {
+                console.log(err.message);
+                const uploadUrl = 'http://buz.co/rnfs/upload-tester.php';
+
+            });
+    }
+
+
+
     /*创建目录*/
     creatFile() {
         const path = RNFS.MainBundlePath + 'abc/test.txt' ;
