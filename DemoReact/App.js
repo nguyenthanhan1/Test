@@ -1380,6 +1380,37 @@ RNFS.writeFile(path, name, 'utf8')
             });
     }
 
+    writeFile() {
+        const uploadUrl = 'http://buz.co/rnfs/upload-tester.php';
+
+        // create a path you want to write to
+        const path = RNFS.MainBundlePath + '/test.txt';
+
+        // write the file
+        RNFS.writeFile(path, '这是一段文本，YES', 'utf8')
+            .then((success) => {
+                console.log('path', path);
+            })
+            .catch((err) => {
+                console.log(err.message);
+            });
+    }
+    writeFile() {
+        const uploadUrl = 'http://buz.co/rnfs/upload-tester.php';
+
+        // create a path you want to write to
+        const path = RNFS.MainBundlePath + '/test.txt';
+
+        // write the file
+        RNFS.writeFile(path, '这是一段文本，YES', 'utf8')
+            .then((success) => {
+                console.log('path', path);
+            })
+            .catch((err) => {
+                console.log(err.message);
+            });
+    }
+
 
     /*删除文件*/
     deleteFile() {
@@ -1433,6 +1464,39 @@ RNFS.writeFile(path, name, 'utf8')
 
             });
     }
+
+
+    /*在已有的txt上添加新的文本*/
+    appendFile() {
+        const path = RNFS.MainBundlePath + '/test.txt';
+
+        return RNFS.appendFile(path, '新添加的文本', 'utf8')
+            .then((success) => {
+                console.log('success');
+            })
+            .catch((err) => {
+                console.log(err.message);
+                const uploadUrl = 'http://buz.co/rnfs/upload-tester.php';
+
+            });
+    }
+
+
+    /*在已有的txt上添加新的文本*/
+    appendFile() {
+        const path = RNFS.MainBundlePath + '/test.txt';
+
+        return RNFS.appendFile(path, '新添加的文本', 'utf8')
+            .then((success) => {
+                console.log('success');
+            })
+            .catch((err) => {
+                console.log(err.message);
+                const uploadUrl = 'http://buz.co/rnfs/upload-tester.php';
+
+            });
+    }
+
 
 
     /*创建目录*/
