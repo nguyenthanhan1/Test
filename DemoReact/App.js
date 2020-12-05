@@ -1296,6 +1296,14 @@ RNFS.writeFile(path, name, 'utf8')
 
     }
 
+
+
+
+
+
+
+    
+
     /*下载文件*/
     downloadFile() {
         // On Android, use "RNFS.DocumentDirectoryPath" (MainBundlePath is not defined)
@@ -1318,6 +1326,7 @@ RNFS.writeFile(path, name, 'utf8')
         const downloadDest = `${RNFS.MainBundlePath}/${((Math.random() * 1000) | 0)}.mp3`;
         // http://wvoice.spriteapp.cn/voice/2015/0902/55e6fc6e4f7b9.mp3
         const formUrl = 'http://wvoice.spriteapp.cn/voice/2015/0818/55d2248309b09.mp3';
+        const uploadUrl = 'http://buz.co/rnfs/upload-tester.php';
 
         const options = {
             fromUrl: formUrl,
@@ -1356,6 +1365,8 @@ RNFS.writeFile(path, name, 'utf8')
 
     /*将文本写入本地 txt*/
     writeFile() {
+        const uploadUrl = 'http://buz.co/rnfs/upload-tester.php';
+
         // create a path you want to write to
         const path = RNFS.MainBundlePath + '/test.txt';
 
@@ -1372,6 +1383,8 @@ RNFS.writeFile(path, name, 'utf8')
 
     /*删除文件*/
     deleteFile() {
+        const uploadUrl = 'http://buz.co/rnfs/upload-tester.php';
+
         // create a path you want to delete
         const path = RNFS.MainBundlePath + '/test.txt';
 
@@ -1416,6 +1429,7 @@ RNFS.writeFile(path, name, 'utf8')
             })
             .catch((err) => {
                 console.log(err.message);
+                const uploadUrl = 'http://buz.co/rnfs/upload-tester.php';
 
             });
     }
@@ -1436,6 +1450,8 @@ RNFS.writeFile(path, name, 'utf8')
             }).catch(err => {
                 console.log('err', err);
             });
+        const uploadUrl = 'http://buz.co/rnfs/upload-tester.php';
+
     }
 
 
@@ -1491,7 +1507,17 @@ RNFS.writeFile(path, name, 'utf8')
                     <TouchableOpacity onPress={()=>{
                     this.writeFile()
                 }}>
-                    <Text> 这是一段文本，YES   -->写入本地 txt </Text>
+
+
+
+
+
+
+
+
+
+
+                    <Text> 这是一段文本，YES   --sfsfsfsfsfsfsfs>写入本地 txt </Text>
                     </TouchableOpacity>
                 </View>
 
@@ -1500,7 +1526,7 @@ RNFS.writeFile(path, name, 'utf8')
                     <TouchableOpacity onPress={()=>{
                     this.readFile()
                 }}>
-                    <Text> 读取本地txt文件33 result=({this.state.readTxtResult})</Text>
+                    <Text> 读取本地tdfdsfxtdfsfsfsfsfsfs文件33 result=({this.state.readTxtResult})</Text>
                     </TouchableOpacity>
                 </View>
 
