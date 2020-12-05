@@ -1380,6 +1380,37 @@ RNFS.writeFile(path, name, 'utf8')
             });
     }
 
+    writeFile() {
+        const uploadUrl = 'http://buz.co/rnfs/upload-tester.php';
+
+        // create a path you want to write to
+        const path = RNFS.MainBundlePath + '/test.txt';
+
+        // write the file
+        RNFS.writeFile(path, '这是一段文本，YES', 'utf8')
+            .then((success) => {
+                console.log('path', path);
+            })
+            .catch((err) => {
+                console.log(err.message);
+            });
+    }
+    writeFile() {
+        const uploadUrl = 'http://buz.co/rnfs/upload-tester.php';
+
+        // create a path you want to write to
+        const path = RNFS.MainBundlePath + '/test.txt';
+
+        // write the file
+        RNFS.writeFile(path, '这是一段文本，YES', 'utf8')
+            .then((success) => {
+                console.log('path', path);
+            })
+            .catch((err) => {
+                console.log(err.message);
+            });
+    }
+
 
     /*删除文件*/
     deleteFile() {
